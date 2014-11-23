@@ -1,21 +1,34 @@
 <!doctype html>
 <head>
-    <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-<body ng-app="angtais">
+<body ng-app="angtais" ng-controller="MainCtrl as main">
+
+<div>
+  <a ng-click="main.previousSlide()">
+    <div class="left-triangle"></div>
+  </a>
+  <div ng-include="main.currentSlide()"></div>
+  <a ng-click="main.nextSlide()">
+    <div class="right-triangle"></div>
+  </a>
+    <span class="slideNo">
+        <span>{{main.slideIndex+1}}</span> / <span>8</span>
+    </span>
+</div>
 
 
-    <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 
-    <!-- build:js scripts/modules.js -->
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <!-- endbuild -->
+<!-- build:js scripts/modules.js -->
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<!-- endbuild -->
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/directives/slider.js"></script>
-    <!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/directives/slider.js"></script>
+<!-- endbuild -->
 </body>
 </html>
