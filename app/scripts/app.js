@@ -7,6 +7,11 @@ function config($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'views/main.html',
     controller: 'MainCtrl',
-    controllerAs: 'main'
+    controllerAs: 'main',
+    resolve: {
+      slides: function(sliderService) {
+        return sliderService.getSlides();
+      }
+    }
   })
 }

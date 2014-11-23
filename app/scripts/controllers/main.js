@@ -1,8 +1,8 @@
 'use strict';
 
-MainCtrl.$inject = ['$scope', '$document', '$http'];
+MainCtrl.$inject = ['$scope', '$document', 'slides'];
 
-function MainCtrl($scope, $document, $http) {
+function MainCtrl($scope, $document, slides) {
   var vm = this;
   vm.slideIndex = 0;
   vm.nextSlide = function () {
@@ -25,15 +25,11 @@ function MainCtrl($scope, $document, $http) {
     })
   };
 
-  vm.slides = [];
+  vm.slides = slides;
 
   activate();
 
   function activate() {
-    $http.get('/data/slides.json').success(function(data) {
-      vm.slides = data;
-    });
-
     $document.keydown(function(event) {
       if (event.keyCode == 37) {
         $scope.$apply(function() {
