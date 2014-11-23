@@ -5,7 +5,7 @@
   <div class="header" ng-show="main.slides[main.slideIndex].title">
     <h1 class="title" ng-bind-html="main.slides[main.slideIndex].title"></h1>
   </div>
-  <div class="container" ng-include="main.currentSlide()"></div>
+  <div class="container slide" ng-include="main.currentSlide()"></div>
   <a ng-click="main.nextSlide()">
     <div class="right-triangle"></div>
   </a>

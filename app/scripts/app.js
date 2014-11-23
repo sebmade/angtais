@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('angtais', ['ngSanitize']);
+angular.module('angtais', ['ngSanitize', 'ngAnimate']);

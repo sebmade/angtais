@@ -18,6 +18,12 @@ function MainCtrl($scope, $document, $http) {
     vm.slideIndex = vm.slides.indexOf(s);
   };
   vm.now = new Date();
+  vm.addSlide = function(title, content) {
+    vm.slides.push({
+      title: title,
+      content: content
+    })
+  };
 
   vm.slides = [];
 

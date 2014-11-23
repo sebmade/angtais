@@ -1,10 +1,10 @@
 <form name="slideForm" class="container">
   <br><br><br>
 
-  <h1 class="note">Titre : </h1><input name="title" class="subtitle" type="text" autofocus/>
+  <h1 class="note">Titre : </h1><input name="title" class="subtitle" type="text" autofocus ng-model="main.title"/>
 
-  <h1 class="note">Contenu : </h1><textarea class="subtitle"/>
+  <h1 class="note">Contenu : </h1><textarea class="subtitle" ng-model="main.content"/>
 
-  <button class="note">ajouter</button>
+  <button class="note" ng-click="main.addSlide(main.title, main.content)">ajouter</button>
 
 </form>
