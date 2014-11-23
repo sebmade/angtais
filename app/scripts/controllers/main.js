@@ -1,15 +1,16 @@
 'use strict';
 
 function MainCtrl() {
-  this.slideIndex = 0;
-  this.nextSlide = function () {
-    this.slideIndex++;
+  var vm = this;
+  vm.slideIndex = 0;
+  vm.nextSlide = function () {
+    vm.slideIndex++;
   };
-  this.previousSlide = function() {
-    this.slideIndex--;
+  vm.previousSlide = function() {
+    vm.slideIndex--;
   };
-  this.currentSlide = function () {
-    return "slide"+this.slideIndex+".html";
+  vm.currentSlide = function () {
+    return "slide"+vm.slideIndex+".html";
   };
 }
 
