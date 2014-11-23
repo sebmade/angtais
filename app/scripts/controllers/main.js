@@ -14,6 +14,10 @@ function MainCtrl($scope, $document, $http) {
   vm.currentSlide = function () {
     return vm.slides[vm.slideIndex].content;
   };
+  vm.gotoSlide = function(s) {
+    vm.slideIndex = vm.slides.indexOf(s);
+  };
+  vm.now = new Date();
 
   vm.slides = [];
 

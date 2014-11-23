@@ -1,6 +1,7 @@
     <br><br><br>
+    <input class="note" type="text" ng-model="main.query"/>
 
-    <div class="note">
-      <a></a>
+    <div class="note" ng-repeat="s in main.slides | filter:main.query">
+      <a ng-bind-html="s.title" ng-click="main.gotoSlide(s)"></a>
       <br>
     </div>
