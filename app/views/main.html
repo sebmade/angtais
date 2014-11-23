@@ -1,0 +1,10 @@
+<a ng-click="main.previousSlide()">
+  <div class="left-triangle"></div>
+</a>
+<div ng-include="main.currentSlide()"></div>
+<a ng-click="main.nextSlide()">
+  <div class="right-triangle"></div>
+</a>
+<span class="slideNo">
+        <span>{{main.slideIndex+1}}</span> / <span>8</span>
+    </span>
