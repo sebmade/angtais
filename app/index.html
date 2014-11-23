@@ -2,9 +2,9 @@
 <head>
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body ng-app="angtais" ng-controller="MainCtrl as main">
+<body ng-app="angtais">
 
-<slider></slider>
+<div ng-view></div>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
@@ -12,6 +12,7 @@
 <!-- build:js scripts/modules.js -->
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->

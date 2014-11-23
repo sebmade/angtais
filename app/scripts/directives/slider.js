@@ -2,7 +2,7 @@
 
 function Slider() {
   return {
-    templateUrl: 'views/main.html',
+    templateUrl: 'views/slider.html',
     restrict: 'E',
     link: function postLink(scope, element, attrs) {
 
